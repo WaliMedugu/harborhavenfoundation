@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harbor Haven Foundation | Seeing Beyond Borders</title>
+<meta name="description" content="Harbor Haven Foundation is a compassionate organization providing safety, mental health support, basic education, and community outreach to vulnerable individuals, especially women and children in Abuja, Nigeria.">
+<meta name="keywords" content="Harbor Haven Foundation, Non-profit, NGO, Charity, Abuja Nigeria, Mental Health Support, Education Access, Women and Children Protection, Community Outreach">
+<meta name="author" content="Harbor Haven Foundation">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harborhavenfoundation.org/">
+<meta property="og:title" content="Harbor Haven Foundation | Seeing Beyond Borders">
+<meta property="og:description" content="Providing safety, mental health support, and education to vulnerable individuals, women, and children in Abuja, Nigeria.">
+<meta property="og:image" content="https://harborhavenfoundation.org/logo.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://harborhavenfoundation.org/">
+<meta name="twitter:title" content="Harbor Haven Foundation | Seeing Beyond Borders">
+<meta name="twitter:description" content="Providing safety, mental health support, and education to vulnerable individuals, women, and children in Abuja, Nigeria.">
+<meta name="twitter:image" content="https://harborhavenfoundation.org/logo.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://harborhavenfoundation.org/">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════════
+   HARBOR HAVEN · NAVY EDITORIAL EDITION
+   Color palette derived from logo: dark slate-navy + ivory + soft blue-grey
+════════════════════════════════════════════════════ */
+:root {
+  /* Navy/slate palette from logo */
+  --navy:       #1a2535;
+  --navy-deep:  #111b28;
+  --navy-mid:   #243045;
+  --slate:      #2f4060;
+  --slate-lt:   #3d5275;
+  --mist:       #8ba3be;
+  --fog:        #c2d0df;
+  --silver:     #dde5ee;
+  --ivory:      #f4f0eb;
+  --warm-white: #faf7f3;
+  --cream:      #fdf9f5;
+  /* Accent ...the warm cream-peach from the house icon */
+  --gold:       #e8c99a;
+  --gold-lt:    #f0d9b8;
+  --gold-dk:    #c9a46a;
+  /* Text */
+  --ink:        #0d1520;
+  --text:       #2a3a50;
+  --text-lt:    #5a7090;
+
+  --ff-d: 'Playfair Display', Georgia, serif;
+  --ff-b: 'Lora', Georgia, serif;
+  --ff-m: 'DM Mono', monospace;
+
+  --nav-h: 72px;
+  --r: 3px;
+  --rl: 8px;
+  --sh: 0 2px 24px rgba(17,27,40,.12);
+  --sh-lg: 0 12px 56px rgba(17,27,40,.22);
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--text);line-height:1.7;overflow-x:hidden}
+
+/* grain overlay */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:.5;
+}
+
+/* scrollbar */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--silver)}
+::-webkit-scrollbar-thumb{background:var(--mist);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--slate-lt)}
+
+/* ── PAGES ── */
+.page{display:none;min-height:100vh;animation:pgIn .45s var(--ease) both}
+.page.active{display:block}
+@keyframes pgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:200;
+  height:var(--nav-h);
+  background:rgba(244,240,235,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--silver);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;
+  transition:box-shadow .3s var(--ease);
+}
+nav.scrolled{box-shadow:0 2px 32px rgba(17,27,40,.13)}
+
+.nav-logo{display:flex;align-items:center;gap:13px;cursor:pointer;text-decoration:none;flex-shrink:0}
+.nav-logo-mark{
+  width:40px;height:40px;
+  border-radius:50%;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .4s var(--ease);
+}
+.nav-logo:hover .nav-logo-mark{transform:rotate(12deg) scale(1.08)}
+.nav-logo-mark img{width:100%;height:100%;object-fit:cover}
+.nav-logo-name{
+  font-family:var(--ff-d);font-style:italic;font-weight:600;
+  font-size:1.18rem;color:var(--ink);line-height:1.1
+}
+.nav-logo-tag{
+  display:block;
+  font-family:var(--ff-m);font-style:normal;font-size:.68rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--text);margin-top:2px
+}
+
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links a{
+  font-family:var(--ff-m);font-size:.82rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text);text-decoration:none;
+  padding:8px 13px;border-radius:var(--r);
+  cursor:pointer;
+  transition:color .25s,background .25s;
+}
+.nav-links a:hover{color:var(--navy);background:rgba(26,37,53,.07)}
+.nav-links a.active{color:var(--slate)}
+.nav-cta{background:var(--navy)!important;color:var(--ivory)!important;padding:9px 22px!important;border-radius:var(--r)!important}
+.nav-cta:hover{background:var(--slate)!important;color:white!important}
+
+/* ── HAMBURGER ── */
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--ff-m);font-size:.76rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;
+  padding:14px 28px;border:none;border-radius:var(--r);
+  cursor:pointer;text-decoration:none;
+  transition:all .3s var(--ease);white-space:nowrap;
+  position:relative;overflow:hidden;
+}
+.btn::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,.12);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s var(--ease);
+}
+.btn:hover::after{transform:scaleX(1)}
+.btn-primary{background:var(--navy);color:var(--ivory)}
+.btn-primary:hover{background:var(--slate);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,37,53,.35)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--ivory);transform:translateY(-2px)}
+.btn-ghost{background:rgba(47,64,96,.07);color:var(--slate)}
+.btn-ghost:hover{background:rgba(47,64,96,.15)}
+.btn-dark{background:var(--navy-deep);color:var(--cream)}
+.btn-dark:hover{background:var(--ink);transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,21,32,.4)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,164,106,.35)}
+.btn-lg{padding:17px 42px;font-size:.9rem}
+.btn-sm{padding:9px 18px;font-size:.78rem}
+
+/* ── TYPE ── */
+.d-xl{font-family:var(--ff-d);font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:700;line-height:1.04;color:var(--ink);letter-spacing:-.02em}
+.d-xl em{font-style:italic;color:var(--slate)}
+.d-lg{font-family:var(--ff-d);font-size:clamp(2rem,3.8vw,3.4rem);font-weight:700;line-height:1.1;color:var(--ink)}
+.d-lg em{font-style:italic;color:var(--slate)}
+.d-md{font-family:var(--ff-d);font-size:clamp(1.5rem,2.8vw,2.3rem);font-weight:600;line-height:1.2;color:var(--ink)}
+.d-md em{font-style:italic;color:var(--slate)}
+.d-sm{font-family:var(--ff-d);font-size:1.35rem;font-weight:600;line-height:1.3;color:var(--navy)}
+.lbl{font-family:var(--ff-m);font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text)}
+.lbl-nv{color:var(--navy)}
+.lbl-ms{color:var(--fog)}
+.b-lg{font-size:1.12rem;line-height:1.78;color:var(--text)}
+.b-md{font-size:1.02rem;line-height:1.72;color:var(--text)}
+
+/* ── DIVIDER ── */
+.div-line{width:44px;height:2px;background:var(--slate);margin:14px 0}
+.div-center{margin:14px auto}
+
+/* ── SECTIONS ── */
+.sec{padding:96px 0}.sec-sm{padding:64px 0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 52px}
+.wrap-sm{max-width:800px;margin:0 auto;padding:0 52px}
+
+/* ── PAGE HEADER ── */
+.pg-head{
+  background:var(--navy-deep);padding:88px 0 72px;
+  position:relative;overflow:hidden;
+}
+.pg-head::before{
+  content:'';position:absolute;
+  top:-40%;right:-10%;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(139,163,190,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.pg-head::after{
+  content:'';position:absolute;
+  bottom:-20%;left:-5%;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(232,201,154,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── TICKER ── */
+.ticker{background:var(--navy-deep);padding:13px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.04)}
+.ticker-track{display:flex;width:max-content;animation:tick 36s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t-item{
+  font-family:var(--ff-m);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(194,208,223,.8);padding:0 36px;white-space:nowrap;
+}
+.t-item::after{content:'◆';margin-left:36px;color:var(--gold);opacity:.6}
+
+/* ── CARDS ── */
+.card{
+  background:var(--warm-white);border:1px solid var(--silver);
+  border-radius:var(--rl);padding:36px;
+  transition:box-shadow .35s var(--ease),transform .35s var(--ease),border-color .35s;
+}
+.card:hover{box-shadow:var(--sh);transform:translateY(-4px);border-color:var(--fog)}
+.card-icon{
+  width:52px;height:52px;
+  background:rgba(47,64,96,.08);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;font-size:1.4rem;
+  transition:background .3s,transform .3s;
+}
+.card:hover .card-icon{background:rgba(47,64,96,.16);transform:scale(1.08)}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.g23{display:grid;grid-template-columns:2fr 3fr;gap:68px;align-items:start}
+.g32{display:grid;grid-template-columns:3fr 2fr;gap:68px;align-items:start}
+
+/* ── PULL QUOTE ── */
+.pq{
+  font-family:var(--ff-d);font-style:italic;
+  font-size:clamp(1.3rem,2.2vw,1.85rem);
+  font-weight:400;color:var(--slate);line-height:1.55;
+  padding:36px 52px;
+  background:var(--warm-white);
+  border-left:3px solid var(--slate);
+  border-radius:0 var(--rl) var(--rl) 0;
+  position:relative;
+}
+.pq::before{
+  content:'\201C';font-size:6rem;color:var(--fog);
+  position:absolute;top:-14px;left:14px;
+  line-height:1;font-style:normal;pointer-events:none;
+}
+
+/* ── BANDS ── */
+.band-dark{background:var(--navy-deep);padding:88px 0}
+.band-sand{background:var(--silver);padding:80px 0}
+.band-tc{background:var(--navy);padding:80px 0}
+.band-ink{background:var(--ink);padding:80px 0}
+
+/* ── FORMS ── */
+.f-group{margin-bottom:22px}
+.f-label{
+  display:block;font-family:var(--ff-m);font-size:.78rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--text);margin-bottom:8px;
+}
+.f-input,.f-select,.f-textarea{
+  width:100%;padding:13px 17px;
+  font-family:var(--ff-b);font-size:.93rem;color:var(--text);
+  background:var(--warm-white);border:1.5px solid var(--silver);
+  border-radius:var(--r);outline:none;
+  transition:border-color .25s,box-shadow .25s;
+  -webkit-appearance:none;appearance:none;
+}
+.f-input:focus,.f-select:focus,.f-textarea:focus{
+  border-color:var(--slate);
+  box-shadow:0 0 0 3px rgba(47,64,96,.12);
+}
+.f-textarea{resize:vertical;min-height:136px}
+.f-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a7090' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 15px center;padding-right:42px;
+}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-card{background:var(--warm-white);border:1px solid var(--silver);border-radius:var(--rl);padding:48px;box-shadow:var(--sh)}
+.f-success{
+  display:none;background:rgba(47,64,96,.06);
+  border:1px solid var(--fog);border-radius:var(--r);
+  padding:18px 22px;margin-top:14px;
+  font-family:var(--ff-b);font-size:.9rem;color:var(--slate);
+}
+
+/* ── CHECKBOX ── */
+.cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.cb{display:flex;align-items:center;gap:9px;cursor:pointer}
+.cb input{width:17px;height:17px;accent-color:var(--navy);cursor:pointer;flex-shrink:0}
+.cb span{font-family:var(--ff-b);font-size:.88rem;color:var(--text)}
+
+/* ── IMPACT NUMS ── */
+.imp-n{
+  font-family:var(--ff-d);font-size:clamp(2.4rem,4vw,4rem);
+  font-weight:700;color:var(--slate);line-height:1;margin-bottom:4px
+}
+
+/* ── PAYMENT TABS ── */
+.pay-tabs{display:flex;border:1.5px solid var(--silver);border-radius:var(--r);overflow:hidden;margin-bottom:28px}
+.pay-tab{
+  flex:1;padding:13px 18px;
+  font-family:var(--ff-m);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--warm-white);color:var(--text);border:none;cursor:pointer;
+  border-right:1px solid var(--silver);transition:all .25s;
+}
+.pay-tab:last-child{border-right:none}
+.pay-tab.active{background:var(--navy);color:white}
+.pay-tab:hover:not(.active){background:var(--silver)}
+.pay-panel{display:none}.pay-panel.active{display:block}
+.bk-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--silver)}
+.bk-row:last-child{border-bottom:none}
+.bk-k{font-family:var(--ff-m);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+.bk-v{font-family:var(--ff-b);font-weight:600;color:var(--navy)}
+
+/* ── DONATE TIERS ── */
+.dt{
+  background:var(--warm-white);border:1.5px solid var(--silver);
+  border-radius:var(--rl);padding:30px 24px;text-align:center;
+  cursor:pointer;transition:all .3s var(--ease);position:relative;
+}
+.dt.feat{border-color:var(--slate);background:linear-gradient(150deg,var(--warm-white),rgba(47,64,96,.04))}
+.dt.feat::before{
+  content:'Most Impactful';position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--navy);color:var(--ivory);
+  font-family:var(--ff-m);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 14px;border-radius:20px;white-space:nowrap;
+}
+.dt:hover{border-color:var(--slate);box-shadow:var(--sh);transform:translateY(-3px)}
+.dt.selected{border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,37,53,.2)}
+.dt-amt{font-family:var(--ff-d);font-size:2.4rem;font-weight:700;color:var(--slate);line-height:1;margin:10px 0 5px}
+
+/* ── PROGRAM PILLAR CARDS ── */
+.pc{background:var(--warm-white);border-radius:var(--rl);overflow:hidden;border:1px solid var(--silver);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+.pc:hover{box-shadow:var(--sh-lg);transform:translateY(-5px)}
+.pc-head{padding:36px 36px 24px;position:relative}
+.pc-n{position:absolute;top:18px;right:20px;font-family:var(--ff-d);font-size:4.5rem;font-weight:700;color:rgba(194,208,223,.4);line-height:1;pointer-events:none}
+.pc-icon{font-size:2.2rem;margin-bottom:16px}
+.pc-body{padding:0 36px 36px}
+.pc:nth-child(1) .pc-head{background:linear-gradient(135deg,#dce5ee,#e8eef5)}
+.pc:nth-child(2) .pc-head{background:linear-gradient(135deg,#d5e0eb,#e3eaf3)}
+.pc:nth-child(3) .pc-head{background:linear-gradient(135deg,#dae2ec,#e6ecf4)}
+.pc:nth-child(4) .pc-head{background:linear-gradient(135deg,#d8e1ea,#e4ebf2)}
+
+/* ── CONTACT INFO ROWS ── */
+.ci-row{display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-bottom:1px solid var(--silver)}
+.ci-row:last-child{border-bottom:none}
+.ci-icon{width:42px;height:42px;background:rgba(47,64,96,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.05rem;transition:background .3s}
+.ci-row:hover .ci-icon{background:rgba(47,64,96,.18)}
+
+/* ── FOUNDER PORTRAIT ── */
+.fp{
+  aspect-ratio:3/4;
+  background:linear-gradient(155deg,var(--slate-lt) 0%,var(--navy) 55%,var(--navy-deep) 100%);
+  border-radius:var(--rl);display:flex;align-items:flex-end;padding:24px;
+  position:relative;overflow:hidden;
+}
+.fp::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='38' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") center/120px repeat;
+}
+.fp-card{background:rgba(255,255,255,.92);border-radius:4px;padding:14px 18px;position:relative;z-index:1;width:100%}
+
+/* ── VALUES ── */
+.val{display:flex;gap:22px;align-items:flex-start;padding:26px 0;border-bottom:1px solid var(--silver)}
+.val-n{font-family:var(--ff-d);font-style:italic;font-size:2.2rem;font-weight:700;color:var(--fog);line-height:1;flex-shrink:0;width:38px}
+
+/* ── TIMELINE ── */
+.tl{position:relative;padding-left:30px;border-left:2px solid var(--fog)}
+.tl-item{margin-bottom:40px;position:relative}
+.tl-item::before{content:'';position:absolute;left:-37px;top:6px;width:12px;height:12px;background:var(--slate);border-radius:50%;border:3px solid var(--cream)}
+
+/* ── EMERGENCY CARDS ── */
+.ec{background:var(--navy);color:var(--cream);border-radius:var(--rl);padding:36px;position:relative;overflow:hidden}
+.ec::before{content:'';position:absolute;top:-20%;right:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(139,163,190,.18),transparent 70%);pointer-events:none}
+.ec-num{font-family:var(--ff-d);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1;margin:8px 0 4px}
+
+/* ── PARTNER LOGOS ── */
+.p-band{display:flex;gap:44px;align-items:center;justify-content:center;flex-wrap:wrap;padding:36px 0}
+.p-logo{font-family:var(--ff-d);font-style:italic;font-size:1.1rem;font-weight:600;color:var(--mist);opacity:.5;transition:opacity .3s;cursor:default}
+.p-logo:hover{opacity:1}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);color:var(--cream);padding:80px 0 40px}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ft-desc{font-family:var(--ff-b);font-size:.96rem;color:rgba(244,240,235,.8);line-height:1.75;margin:14px 0 26px}
+.ft-col-h{font-family:var(--ff-m);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fog);margin-bottom:18px}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-links a{font-family:var(--ff-b);font-size:.96rem;color:rgba(244,240,235,.75);text-decoration:none;cursor:pointer;transition:color .25s}
+.ft-links a:hover{color:var(--ivory)}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:28px}
+.ft-copy{font-family:var(--ff-m);font-size:.78rem;letter-spacing:.07em;color:rgba(194,208,223,.6)}
+
+/* ── HERO ── */
+.hero{
+  min-height:calc(100vh - var(--nav-h));
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:80px;
+  padding:88px 52px;max-width:1160px;margin:0 auto;
+  position:relative;z-index:1;
+}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--slate)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.hero-img{position:relative}
+
+/* METABALL hero visual */
+.hero-visual-wrap{
+  position:relative;
+  width:100%;
+}
+.hero-photo{
+  width:100%;aspect-ratio:4/5;
+  border-radius:4px;overflow:visible;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:2;
+  background:linear-gradient(155deg,var(--slate-lt) 0%,var(--navy) 48%,var(--navy-deep) 100%);
+}
+.hero-photo-inner{
+  position:relative;z-index:3;
+  text-align:center;padding:36px;
+}
+.hero-photo-inner img{
+  width:160px;height:160px;
+  border-radius:16px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.3);
+  margin-bottom:16px;
+  transition:transform .4s var(--ease);
+}
+.hero-photo:hover .hero-photo-inner img{
+  transform:scale(1.05);
+}
+.hero-photo-txt{
+  font-family:var(--ff-d);font-style:italic;
+  font-size:clamp(1.6rem,2.6vw,2.4rem);font-weight:700;
+  color:rgba(244,240,235,.9);line-height:1.3;
+  margin-top:20px;
+}
+/* frame decoration */
+.hero-photo::before{
+  content:'';position:absolute;inset:-12px;
+  border:1.5px solid rgba(194,208,223,.25);
+  border-radius:6px;transform:rotate(1.5deg);z-index:0;
+}
+
+/* metaballs blob layer */
+.hero-blobs{
+  position:absolute;inset:-35%;
+  filter:url('#metaball');
+  pointer-events:none;z-index:1;
+}
+.blob{
+  position:absolute;border-radius:50%;
+  animation:blobMove 20s infinite alternate ease-in-out;
+}
+.blob-1{background:var(--slate);width:220px;height:220px;opacity:.55;top:20%;left:15%;animation-duration:24s}
+.blob-2{background:var(--navy-mid);width:280px;height:280px;opacity:.45;top:10%;left:30%;animation-duration:32s;animation-delay:-8s}
+.blob-3{background:var(--slate-lt);width:180px;height:180px;opacity:.5;top:35%;left:8%;animation-duration:28s;animation-delay:-14s}
+.blob-4{background:var(--navy);width:240px;height:240px;opacity:.35;top:45%;left:42%;animation-duration:38s;animation-delay:-20s}
+.blob-5{background:rgba(139,163,190,.6);width:140px;height:140px;opacity:.5;top:65%;left:22%;animation-duration:18s;animation-delay:-5s}
+@keyframes blobMove{
+  0%{transform:translate(0,0) scale(1) rotate(0deg)}
+  33%{transform:translate(50px,35px) scale(1.15) rotate(120deg)}
+  66%{transform:translate(-35px,70px) scale(.88) rotate(240deg)}
+  100%{transform:translate(25px,-18px) scale(1.08) rotate(360deg)}
+}
+
+.hero-stats{
+  position:absolute;bottom:-20px;left:0;right:0;
+  background:var(--navy-deep);border-radius:4px;
+  padding:22px 28px;
+  display:flex;gap:24px;justify-content:space-around;
+  box-shadow:var(--sh-lg);z-index:4;
+}
+.hs-n{font-family:var(--ff-d);font-size:1.65rem;font-weight:700;color:var(--gold);line-height:1}
+.hs-l{font-family:var(--ff-m);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);margin-top:4px}
+
+/* ── FLOATING ACCENT ── */
+.float-accent{
+  position:absolute;
+  font-family:var(--ff-d);font-style:italic;font-size:8rem;font-weight:700;
+  color:rgba(47,64,96,.04);
+  pointer-events:none;user-select:none;line-height:1;
+  white-space:nowrap;z-index:0;
+}
+
+/* ── SECTION HEADER ── */
+.s-head{margin-bottom:52px}
+.s-head-c{text-align:center}.s-head-c .div-line{margin:14px auto}
+
+/* ── MISC ── */
+.tc{text-align:center}.tr{text-align:right}
+.flex{display:flex}.fc{flex-direction:column}.ac{align-items:center}.jc{justify-content:center}
+.g{gap:16px}.g8{gap:8px}.g24{gap:24px}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}
+.mt32{margin-top:32px}.mt40{margin-top:40px}.mt48{margin-top:48px}.mt64{margin-top:64px}
+.mb8{margin-bottom:8px}.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}.mb32{margin-bottom:32px}
+.c-nv{color:var(--navy)}.c-lt{color:var(--text-lt)}.c-cr{color:var(--cream)}.c-gl{color:var(--gold)}
+.inline-link{color:var(--slate);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.tag{
+  display:inline-block;
+  font-family:var(--ff-m);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 12px;border-radius:20px;
+  background:rgba(47,64,96,.08);color:var(--text);
+}
+.notice{background:rgba(47,64,96,.06);border-radius:var(--r);padding:14px 18px;font-family:var(--ff-b);font-size:.92rem;color:var(--text);border-left:3px solid var(--slate)}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.reveal-r{opacity:0;transform:translateX(32px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal-r.vis{opacity:1;transform:translateX(0)}
+.reveal-l{opacity:0;transform:translateX(-32px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal-l.vis{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ── HERO BG ── */
+.hero-section-bg{
+  background:var(--cream);
+  position:relative;overflow:hidden;
+}
+.hero-bg-blob{
+  position:absolute;border-radius:50%;
+  pointer-events:none;z-index:0;
+  animation:bgBlobDrift 30s infinite alternate ease-in-out;
+}
+.hero-bg-blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(47,64,96,.06) 0%,transparent 70%);top:-10%;right:-8%;animation-duration:35s}
+.hero-bg-blob-2{width:400px;height:400px;background:radial-gradient(circle,rgba(139,163,190,.07) 0%,transparent 70%);bottom:-5%;left:-5%;animation-duration:28s;animation-delay:-12s}
+@keyframes bgBlobDrift{
+  0%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(20px,-20px) scale(1.05)}
+  100%{transform:translate(-15px,25px) scale(.96)}
+}
+
+/* ── METABALL SVG FILTER ── */
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:0 24px}
+  .nav-links{
+    display:none;flex-direction:column;
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    height:calc(100vh - var(--nav-h));
+    background:var(--cream);backdrop-filter:none;
+    border-bottom:none;
+    padding:24px;box-shadow:none;z-index:150;
+    overflow-y:auto;gap:8px;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:16px;font-size:1.1rem;border-radius:var(--r);text-align:center;display:block}
+  .ham{display:flex}
+  .hero{grid-template-columns:1fr;padding:52px 24px 72px;gap:48px;min-height:auto}
+  .hero-img{padding-bottom:28px}
+  .hero-stats{position:relative;bottom:0;margin-top:20px}
+  .hero-photo{aspect-ratio:3/2}
+  .hero-blobs{inset:-20%}
+  .g2,.g3,.g32,.g23{grid-template-columns:1fr;gap:36px}
+  .g4{grid-template-columns:1fr 1fr;gap:24px}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .wrap,.wrap-sm{padding:0 24px}
+  .f-row{grid-template-columns:1fr;gap:16px}
+  .cb-grid{grid-template-columns:1fr}
+  .form-card{padding:28px 24px}
+  .pq{padding:28px 32px;font-size:1.4rem}
+  .band-dark,.band-sand,.band-tc,.band-ink,.sec,.sec-sm,.pg-head{padding-left:0;padding-right:0}
+}
+@media(max-width:768px){
+  .g4{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr;gap:40px}
+  .hero-stats{flex-wrap:wrap;gap:16px}
+  .hero-btns{flex-direction:column;width:100%}
+  .hero-btns .btn{justify-content:center;width:100%}
+  .flex.ac.jc.g{flex-direction:column;width:100%}
+  .flex.ac.jc.g .btn{width:100%;justify-content:center}
+  .pq{padding:24px 24px 24px 40px;font-size:1.2rem}
+  .pay-tabs{flex-direction:column;border-radius:var(--r)}
+  .pay-tab{border-right:none;border-bottom:1px solid var(--silver)}
+  .pay-tab:last-child{border-bottom:none}
+  .p-band{gap:24px}
+  .d-xl{font-size:clamp(2.4rem, 8vw, 3rem)}
+  .d-lg{font-size:clamp(1.8rem, 6vw, 2.2rem)}
+  .d-md{font-size:clamp(1.4rem, 5vw, 1.8rem)}
+}
+
+/* ── SVG ICONS ── */
+svg.icon-svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--navy);
+  transition: stroke .3s, transform .3s;
+}
+.pc-icon svg.icon-svg {
+  width: 38px;
+  height: 38px;
+  stroke: var(--gold-dk);
+}
+.ci-icon svg.icon-svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--navy);
+}
+</style>
+</head>
+<body>
+
+<!-- SVG Metaball filter -->
+<svg style="display:none">
+  <defs>
+    <filter id="metaball">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 38 -12"/>
+    </filter>
+  </defs>
+</svg>
+
+
+<!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-logo" onclick="go('home')">
+    <div class="nav-logo-mark">
+      <img src="favicon.png" alt="Harbor Haven Logo">
+    </div>
+    <div>
+      <div class="nav-logo-name">Harbor Haven<span class="nav-logo-tag">Foundation</span></div>
+    </div>
+  </a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a data-pg="home"       onclick="go('home')">Home</a></li>
+    <li><a data-pg="about"      onclick="go('about')">About Us</a></li>
+    <li><a data-pg="programs"   onclick="go('programs')">Programs</a></li>
+    <li><a data-pg="get-help"   onclick="go('get-help')">Get Help</a></li>
+    <li><a data-pg="involved"   onclick="go('involved')">Get Involved</a></li>
+    <li><a data-pg="donate"     onclick="go('donate')" class="nav-cta">Donate</a></li>
+    <li><a data-pg="contact"    onclick="go('contact')">Contact</a></li>
+  </ul>
+
+  <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · HOME
+══════════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero-section-bg">
+    <div class="hero-bg-blob hero-bg-blob-1"></div>
+    <div class="hero-bg-blob hero-bg-blob-2"></div>
+    <div class="float-accent" style="top:10%;right:-2%;opacity:.4">Haven</div>
+    <div class="hero">
+      <div class="reveal-l">
+        <div class="hero-eyebrow">
+          <span class="lbl lbl-nv">harborhavenfpundation.org</span>
+        </div>
+        <h1 class="d-xl">
+          Seeing <em>beyond</em><br>borders.
+        </h1>
+        <div class="div-line mt24"></div>
+        <p class="b-lg mt24" style="max-width:460px">
+          To create a safe haven where vulnerable people are protected, supported, and empowered to thrive and build a better future.
+        </p>
+        <div class="hero-btns">
+          <button class="btn btn-primary btn-lg" onclick="go('donate')">Donate</button>
+          <button class="btn btn-outline btn-lg" onclick="go('involved')">Volunteer</button>
+          <button class="btn btn-ghost btn-lg" onclick="go('get-help')">Get help</button>
+        </div>
+      </div>
+
+      <div class="hero-img reveal-r">
+        <div class="hero-visual-wrap">
+          <div class="hero-photo">
+            <!-- Animated metaballs background -->
+            <div class="hero-blobs">
+              <div class="blob blob-1"></div>
+              <div class="blob blob-2"></div>
+              <div class="blob blob-3"></div>
+              <div class="blob blob-4"></div>
+              <div class="blob blob-5"></div>
+            </div>
+            <!-- Logo icon + text overlay -->
+            <div class="hero-photo-inner">
+              <img src="logo.png" alt="Harbor Haven Logo">
+              <div class="hero-photo-txt">Safe.<br><em style="color:var(--gold)">Seen.</em><br>Supported.</div>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div><div class="hs-n">4,200+</div><div class="hs-l">Lives Reached</div></div>
+            <div><div class="hs-n">4</div><div class="hs-l">Core Programs</div></div>
+            <div><div class="hs-n">340+</div><div class="hs-l">Volunteers</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="t-item">Mental Health Support</span>
+      <span class="t-item">Education Access</span>
+      <span class="t-item">Women &amp; Children Protection</span>
+      <span class="t-item">Community Outreach</span>
+      <span class="t-item">Safe Shelter</span>
+      <span class="t-item">Crisis Support</span>
+      <span class="t-item">Healing &amp; Empowerment</span>
+      <span class="t-item">Abuja, Nigeria</span>
+      <span class="t-item">Mental Health Support</span>
+      <span class="t-item">Education Access</span>
+      <span class="t-item">Women &amp; Children Protection</span>
+      <span class="t-item">Community Outreach</span>
+      <span class="t-item">Safe Shelter</span>
+      <span class="t-item">Crisis Support</span>
+      <span class="t-item">Healing &amp; Empowerment</span>
+      <span class="t-item">Abuja, Nigeria</span>
+    </div>
+  </div>
+
+  <!-- Mission -->
+  <section class="sec" style="position:relative;overflow:hidden">
+    <div class="float-accent" style="bottom:-5%;left:-3%;font-size:12rem;opacity:.025">Hope</div>
+    <div class="wrap">
+      <div style="max-width:720px;margin:0 auto;text-align:center" class="reveal">
+        <span class="lbl lbl-nv">Our Mission</span>
+        <div class="div-center"></div>
+        <h2 class="d-lg mt16">Where healing <em>begins.</em></h2>
+        <p class="b-lg mt24">Harbor Haven Foundation is a compassionate, community-driven organization dedicated to providing safety, support, and hope to vulnerable individuals ...especially women, children, and those in crisis.</p>
+        <div class="pq mt40" style="text-align:left">
+          Everyone deserves a place where they feel protected, valued, and empowered.
+        </div>
+        <button class="btn btn-outline mt32" onclick="go('about')">Our Full Story →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four Pillars Preview -->
+  <section class="sec-sm band-sand" style="position:relative">
+    <div class="wrap">
+      <div class="s-head s-head-c reveal">
+        <span class="lbl">What We Do</span>
+        <h2 class="d-md mt16">Our four <em>pillars.</em></h2>
+        <p class="b-md mt16" style="max-width:520px;margin:16px auto 0">At Harbor Haven Foundation, we address critical needs and help people build safer, healthier, and more stable futures.</p>
+      </div>
+      <div class="g4">
+        <div class="card tc reveal d1" style="cursor:pointer" onclick="go('programs')">
+          <div class="card-icon" style="margin:0 auto 20px">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+          </div>
+          <div class="d-sm">Mental Health Support</div>
+          <p class="b-md mt8">We recognize that mental well-being is essential for a healthy and fulfilling life.</p>
+        </div>
+        <div class="card tc reveal d2" style="cursor:pointer" onclick="go('programs')">
+          <div class="card-icon" style="margin:0 auto 20px">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/><path d="M6 14h10"/></svg>
+          </div>
+          <div class="d-sm">Basic Education Programs</div>
+          <p class="b-md mt8">Education is a powerful tool. We are dedicated to ensuring access to basic education.</p>
+        </div>
+        <div class="card tc reveal d3" style="cursor:pointer" onclick="go('programs')">
+          <div class="card-icon" style="margin:0 auto 20px">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 6v11"/><path d="M8 10h8"/></svg>
+          </div>
+          <div class="d-sm">Women &amp; Children Protection</div>
+          <p class="b-md mt8">Protecting women and children is at the heart of our mission. We work to ensure safety.</p>
+        </div>
+        <div class="card tc reveal d4" style="cursor:pointer" onclick="go('programs')">
+          <div class="card-icon" style="margin:0 auto 20px">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="d-sm">Community Outreach</div>
+          <p class="b-md mt8">We extend support directly to those in need, creating strong communities and lasting change.</p>
+        </div>
+      </div>
+      <div class="tc mt48 reveal">
+        <button class="btn btn-primary" onclick="go('programs')">Explore All Programs →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Numbers -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="g2" style="align-items:center;gap:80px">
+        <div class="reveal-l">
+          <span class="lbl lbl-nv">Our Impact</span>
+          <div class="div-line"></div>
+          <h2 class="d-lg mt16">Numbers that <em>matter.</em></h2>
+          <p class="b-lg mt24">Every figure represents a real person ...a life touched, a family stabilized, a future protected. These numbers keep us accountable and keep us moving.</p>
+          <button class="btn btn-outline mt32" onclick="go('about')">About Our Work →</button>
+        </div>
+        <div class="reveal-r">
+          <div class="g2" style="gap:28px">
+            <div class="card tc">
+              <div class="imp-n">4,200+</div>
+              <div class="lbl mt8">People Supported</div>
+            </div>
+            <div class="card tc">
+              <div class="imp-n">340+</div>
+              <div class="lbl mt8">Active Volunteers</div>
+            </div>
+            <div class="card tc">
+              <div class="imp-n">12</div>
+              <div class="lbl mt8">Community Sites</div>
+            </div>
+            <div class="card tc">
+              <div class="imp-n">98%</div>
+              <div class="lbl mt8">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pull Quote Band -->
+  <div class="band-dark">
+    <div class="wrap-sm tc reveal">
+      <span class="lbl lbl-ms mb16" style="display:block">Our Belief</span>
+      <h2 class="d-lg" style="color:var(--ivory)">Safety is not a <em style="color:var(--gold)">privilege.</em><br>It is a right.</h2>
+      <div class="div-center" style="background:var(--gold);margin-top:28px"></div>
+      <p style="color:rgba(194,208,223,.65);font-family:var(--ff-b);font-size:1.05rem;line-height:1.8;max-width:560px;margin:28px auto 0">We exist because systems fail people. We step in, stand alongside, and refuse to look away.</p>
+      <button class="btn btn-gold btn-lg mt40" onclick="go('donate')">Support Our Mission →</button>
+    </div>
+  </div>
+
+  <!-- Testimonials / Partners -->
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="s-head s-head-c reveal">
+        <span class="lbl">Trusted Partners</span>
+        <h2 class="d-sm mt8">Organizations that stand with us</h2>
+      </div>
+      <div class="p-band reveal">
+        <div class="p-logo">UNICEF Nigeria</div>
+        <div class="p-logo">UNFPA</div>
+        <div class="p-logo">ActionAid</div>
+        <div class="p-logo">FCTA</div>
+        <div class="p-logo">NEMA</div>
+        <div class="p-logo">WHO Nigeria</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec-sm band-sand">
+    <div class="wrap-sm tc reveal">
+      <span class="lbl lbl-nv mb16" style="display:block">Join Us</span>
+      <h2 class="d-md">Ready to make a <em>difference?</em></h2>
+      <p class="b-lg mt24" style="max-width:480px;margin:24px auto 0">Whether you give, volunteer, or simply share ...every act of care ripples outward.</p>
+      <div class="flex ac jc g mt40" style="flex-wrap:wrap">
+        <button class="btn btn-primary btn-lg" onclick="go('donate')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Donate Now</button>
+        <button class="btn btn-outline btn-lg" onclick="go('involved')">Become a Volunteer</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · ABOUT
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">Our Story</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">A foundation built on <em>compassion.</em></h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:580px">Harbor Haven Foundation is a compassionate, community-driven organization dedicated to providing safety, support, and hope to vulnerable individuals.</p>
+    </div>
+  </div>
+
+  <!-- Founding Story -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="g32" style="align-items:start">
+        <div class="reveal-l">
+          <span class="lbl lbl-nv">How We Started</span>
+          <div class="div-line"></div>
+          <h2 class="d-lg mt16">A safe space for <em>hope.</em></h2>
+          <p class="b-lg mt24">Founded by Aisha Aliyu, Harbor Haven was born out of a deep desire to create a safe space where people facing hardship...especially women, children, and those in crisis...can find refuge, care, and a second chance at life.</p>
+          <p class="b-md mt20">At Harbor Haven, we believe that everyone deserves a place where they feel protected, valued, and empowered. We work to provide not only immediate support such as shelter and essential resources, but also long-term opportunities that help individuals rebuild their lives with dignity and confidence.</p>
+          
+          <div class="mt32">
+            <span class="lbl lbl-nv">Our Focus Areas</span>
+            <div class="div-line"></div>
+            <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:12px">
+              <li class="b-md" style="display:flex;align-items:center;gap:12px"><span style="color:var(--gold);font-size:1.2rem">•</span> Providing safe shelter and care</li>
+              <li class="b-md" style="display:flex;align-items:center;gap:12px"><span style="color:var(--gold);font-size:1.2rem">•</span> Supporting vulnerable individuals and families</li>
+              <li class="b-md" style="display:flex;align-items:center;gap:12px"><span style="color:var(--gold);font-size:1.2rem">•</span> Promoting education and personal development</li>
+              <li class="b-md" style="display:flex;align-items:center;gap:12px"><span style="color:var(--gold);font-size:1.2rem">•</span> Empowering people to achieve independence and stability</li>
+            </ul>
+          </div>
+          
+          <p class="b-md mt24">We are committed to restoring hope and transforming lives, one person at a time. Through compassion, integrity, and community support, Harbor Haven Foundation continues to be a place where healing begins and brighter futures are built.</p>
+        </div>
+        <div class="reveal-r">
+          <div class="fp">
+            <div class="fp-card">
+              <div class="lbl mb8">Founder & Executive Director</div>
+              <div class="d-sm">Aisha Aliyu</div>
+              <p class="b-md mt8">"Everyone deserves a place where they feel protected, valued, and empowered. We work to restore hope, one life at a time."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="sec-sm band-sand">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <span class="lbl">What Guides Us</span>
+        <h2 class="d-md mt16">Our core <em>values.</em></h2>
+      </div>
+      <div class="g2" style="gap:0">
+        <div>
+          <div class="val reveal d1">
+            <div class="val-n">01</div>
+            <div>
+              <div class="d-sm">Dignity First</div>
+              <p class="b-md mt8">Every person who comes to us is treated with unconditional respect. No shame, no judgment, no barriers.</p>
+            </div>
+          </div>
+          <div class="val reveal d2">
+            <div class="val-n">02</div>
+            <div>
+              <div class="d-sm">Community-Rooted</div>
+              <p class="b-md mt8">We grow from within the communities we serve. Local knowledge, local relationships, lasting change.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="val reveal d3">
+            <div class="val-n">03</div>
+            <div>
+              <div class="d-sm">Accountability</div>
+              <p class="b-md mt8">Every naira donated is tracked, reported, and put to work. Transparency is not optional for us ...it's a promise.</p>
+            </div>
+          </div>
+          <div class="val reveal d4">
+            <div class="val-n">04</div>
+            <div>
+              <div class="d-sm">Holistic Care</div>
+              <p class="b-md mt8">Safety is not just shelter. We address mental health, education, community, and economic stability together.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="sec">
+    <div class="wrap-sm">
+      <div class="s-head reveal">
+        <span class="lbl">Our Journey</span>
+        <h2 class="d-md mt16">Milestones that <em>shaped us.</em></h2>
+      </div>
+      <div class="tl">
+        <div class="tl-item reveal d1">
+          <div class="lbl lbl-nv">2018</div>
+          <div class="d-sm mt8">Foundation Established</div>
+          <p class="b-md mt8">Harbor Haven registers as an NGO in Abuja, opens its first community outreach point in Garki.</p>
+        </div>
+        <div class="tl-item reveal d2">
+          <div class="lbl lbl-nv">2019</div>
+          <div class="d-sm mt8">First Shelter Opens</div>
+          <p class="b-md mt8">A 12-bed emergency shelter for women and children opens in Wuse 2, serving 80 individuals in its first year.</p>
+        </div>
+        <div class="tl-item reveal d3">
+          <div class="lbl lbl-nv">2021</div>
+          <div class="d-sm mt8">Mental Health Program Launch</div>
+          <p class="b-md mt8">Partnering with certified counselors, we launch free mental health support sessions across 4 community centers.</p>
+        </div>
+        <div class="tl-item reveal d4">
+          <div class="lbl lbl-nv">2023</div>
+          <div class="d-sm mt8">4,000 Lives Milestone</div>
+          <p class="b-md mt8">Harbor Haven surpasses 4,000 individuals directly supported ...a milestone marked with a community celebration.</p>
+        </div>
+        <div class="tl-item reveal d5">
+          <div class="lbl lbl-nv">2024</div>
+          <div class="d-sm mt8">National Recognition</div>
+          <p class="b-md mt8">Recognized by the Federal Ministry of Humanitarian Affairs as a trusted implementing partner for GBV response.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /about -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · PROGRAMS
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-programs">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">What We Do</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">Programs built around <em>real needs.</em></h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:560px">At Harbor Haven Foundation, we are committed to improving lives by providing support, protection, and empowerment to vulnerable individuals and communities. Our work is centered around compassion, dignity, and creating lasting impact. Through our programs, we address critical needs and help people build safer, healthier, and more stable futures.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g2 programs-grid" style="gap:28px">
+        <div class="pc reveal d1">
+          <div class="pc-head">
+            <span class="pc-n">01</span>
+            <div class="pc-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+            </div>
+            <div class="d-sm">Mental Health Support</div>
+          </div>
+          <div class="pc-body">
+            <p class="b-md mt8">We recognize that mental well-being is essential for a healthy and fulfilling life. Many individuals facing hardship also struggle with emotional and psychological challenges.</p>
+            <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:8px">
+              <li class="b-md"><span style="color:var(--gold)">•</span> Emotional support and guidance</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Awareness programs on mental health</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Safe spaces where individuals can share their experiences</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Referrals to professional counseling when needed</li>
+            </ul>
+            <div class="notice">Our goal is to break stigma, promote healing, and ensure that no one suffers in silence.</div>
+          </div>
+        </div>
+
+        <div class="pc reveal d2">
+          <div class="pc-head">
+            <span class="pc-n">02</span>
+            <div class="pc-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/><path d="M6 14h10"/></svg>
+            </div>
+            <div class="d-sm">Basic Education Programs</div>
+          </div>
+          <div class="pc-body">
+            <p class="b-md mt8">Education is a powerful tool for transformation. We are dedicated to ensuring that vulnerable children and individuals have access to basic education.</p>
+            <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:8px">
+              <li class="b-md"><span style="color:var(--gold)">•</span> Literacy and numeracy classes</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Learning support for out-of-school children</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Educational resources and materials</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Skills development for self-reliance</li>
+            </ul>
+            <div class="notice">We aim to empower individuals with knowledge and skills that open doors to better opportunities.</div>
+          </div>
+        </div>
+
+        <div class="pc reveal d3">
+          <div class="pc-head">
+            <span class="pc-n">03</span>
+            <div class="pc-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 6v11"/><path d="M8 10h8"/></svg>
+            </div>
+            <div class="d-sm">Women and Children Protection</div>
+          </div>
+          <div class="pc-body">
+            <p class="b-md mt8">Protecting women and children is at the heart of our mission. We work to ensure their safety, dignity, and well-being.</p>
+            <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:8px">
+              <li class="b-md"><span style="color:var(--gold)">•</span> Supporting victims of abuse and neglect</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Providing a safe and secure environment</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Advocacy against violence and exploitation</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Raising awareness on rights and protection</li>
+            </ul>
+            <div class="notice">We strive to create a society where every woman and child feels safe, valued, and protected.</div>
+          </div>
+        </div>
+
+        <div class="pc reveal d4">
+          <div class="pc-head">
+            <span class="pc-n">04</span>
+            <div class="pc-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="d-sm">Community Outreach</div>
+          </div>
+          <div class="pc-body">
+            <p class="b-md mt8">We believe that strong communities create lasting change. Through our outreach programs, we extend support directly to those in need.</p>
+            <ul style="list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:8px">
+              <li class="b-md"><span style="color:var(--gold)">•</span> Community support initiatives</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Distribution of essential items</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Awareness campaigns on health, safety, and well-being</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Engagement with local communities to identify needs</li>
+            </ul>
+            <div class="notice">We work closely with communities to bring hope, support, and practical assistance where it is needed most.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commitment Banner -->
+  <div class="band-dark">
+    <div class="wrap-sm tc reveal">
+      <span class="lbl lbl-ms mb16" style="display:block">Our Commitment</span>
+      <h2 class="d-lg" style="color:var(--ivory)">To provide a safe haven, <em style="color:var(--gold)">restore hope,</em> and empower lives.</h2>
+      <div class="div-center" style="background:var(--gold);margin-top:28px"></div>
+      <p style="color:rgba(194,208,223,.65);font-family:var(--ff-b);font-size:1.05rem;line-height:1.8;max-width:560px;margin:28px auto 0">At Harbor Haven Foundation, we are building a future where everyone has the opportunity to live with dignity, security, and purpose.</p>
+    </div>
+  </div>
+
+</div><!-- /programs -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · GET HELP
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-get-help">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">You Are Not Alone</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">We are here. <em>Right now.</em></h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:560px">If you or someone you know is in danger or needs support, reach us immediately. No paperwork, no waiting lists for emergencies.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <!-- Emergency -->
+      <div class="g2 mb64">
+        <div class="ec reveal d1">
+          <div class="lbl lbl-ms mb16">Emergency Helplines</div>
+          <div class="ec-num">09071996984</div>
+          <div class="ec-num">09063686607</div>
+          <p style="color:rgba(194,208,223,.65);font-family:var(--ff-b);font-size:.9rem;margin-top:12px">Available daily from 9:00 AM to 12:00 Midnight. Your safety is the top priority.</p>
+          <div class="flex g mt16" style="flex-wrap:wrap">
+            <a href="tel:09071996984" class="btn btn-gold btn-sm">Call Main Helpline</a>
+            <a href="tel:09063686607" class="btn btn-sm" style="background:rgba(255,255,255,.07);color:var(--ivory);border:1px solid rgba(255,255,255,.2)">Secondary Helpline</a>
+          </div>
+        </div>
+        <div class="ec reveal d2" style="background:var(--slate)">
+          <div class="lbl lbl-ms mb16">Email Support</div>
+          <div class="ec-num" style="font-size:1.4rem">ayshaaliyu29@gmail.com</div>
+          <div class="ec-num" style="font-size:1.4rem">ibrahimmrahmah01@gmail.com</div>
+          <p style="color:rgba(194,208,223,.65);font-family:var(--ff-b);font-size:.9rem;margin-top:12px">Reach out to our helpline emails for support, advice, or confidential guidance.</p>
+          <div class="flex g mt16" style="flex-wrap:wrap">
+            <a href="mailto:ayshaaliyu29@gmail.com" class="btn btn-gold btn-sm">Email Aisha</a>
+            <a href="mailto:ibrahimmrahmah01@gmail.com" class="btn btn-sm" style="background:rgba(255,255,255,.07);color:var(--ivory);border:1px solid rgba(255,255,255,.2)">Email Rahmah</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Case of Emergency -->
+      <div class="notice mb64 reveal">
+        <strong style="color:var(--navy);font-size:1.1rem;display:flex;align-items:center;gap:8px;margin-bottom:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;stroke:#c25a5a;flex-shrink:0"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> In Case of Emergency</strong>
+        <p class="b-md">If you are in immediate danger, please contact your nearest police station or emergency services in your area. Your safety is the top priority.</p>
+        <p class="b-md mt8"><strong>Location:</strong> Enugu, Nigeria | <strong>Office Hours:</strong> 9:00 AM – 12:00 Midnight (Daily)</p>
+      </div>
+
+      <!-- Request Form -->
+      <div class="g32">
+        <div class="reveal-l">
+          <span class="lbl lbl-nv">Request Support</span>
+          <div class="div-line"></div>
+          <h2 class="d-md mt16">Tell us what you <em>need.</em></h2>
+          <p class="b-lg mt24">Fill out this form to connect with our support team. All information is kept strictly confidential. You can also use a pseudonym if you prefer.</p>
+          <div class="pq mt32">
+            Your safety and privacy matter to us. We will never share your information without your consent.
+          </div>
+        </div>
+
+        <div class="reveal-r">
+          <div class="form-card">
+            <form onsubmit="submitForm(event,'help-success')">
+              <div class="f-group">
+                <label class="f-label">Your Name (or pseudonym)</label>
+                <input type="text" class="f-input" placeholder="Name or alias" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Best way to reach you</label>
+                <input type="text" class="f-input" placeholder="Phone, WhatsApp, or email" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">What kind of support do you need?</label>
+                <select class="f-select" required>
+                  <option value="" disabled selected>Select support type</option>
+                  <option>Mental Health Support</option>
+                  <option>Basic Education Support</option>
+                  <option>Women &amp; Children Protection</option>
+                  <option>Community Outreach Assistance</option>
+                  <option>Other / I'm not sure</option>
+                </select>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Briefly describe your situation</label>
+                <textarea class="f-textarea" placeholder="Share what you're comfortable sharing. There are no wrong answers." required></textarea>
+              </div>
+              <div class="f-group">
+                <label class="lbl" style="margin-bottom:10px">Is this urgent?</label>
+                <div style="display:flex;gap:16px">
+                  <label class="cb"><input type="radio" name="urgency" value="yes"> <span>Yes ...I need help immediately</span></label>
+                  <label class="cb"><input type="radio" name="urgency" value="no" checked> <span>Not immediately urgent</span></label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Submit Request →</button>
+            </form>
+            <div class="f-success" id="help-success">✓ &nbsp; Request received. Our team will contact you within 2 hours during operating hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /get-help -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · GET INVOLVED
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-involved">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">Join Our Community</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">Your hands can <em>change</em> everything.</h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:560px">Volunteers, partners, and donors are the backbone of Harbor Haven. Without you, we cannot exist.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g3 mb64">
+        <div class="card reveal d1">
+          <div class="card-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <div class="d-sm">Volunteer</div>
+          <p class="b-md mt8">Contribute your time and skills. From direct service to admin support, every role matters.</p>
+          <button class="btn btn-outline btn-sm mt24" onclick="document.getElementById('volunteer-form').scrollIntoView({behavior:'smooth'})">Apply to Volunteer</button>
+        </div>
+        <div class="card reveal d2">
+          <div class="card-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h2v2H8V6zm0 4h2v2H8v-2zm8-4h-2v2h2V6zm-2 4h2v2h-2v-2z"/></svg>
+          </div>
+          <div class="d-sm">Partner With Us</div>
+          <p class="b-md mt8">CSR programs, institutional partnerships, and joint initiatives that amplify our reach.</p>
+          <button class="btn btn-outline btn-sm mt24" onclick="go('contact')">Discuss Partnership</button>
+        </div>
+        <div class="card reveal d3">
+          <div class="card-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </div>
+          <div class="d-sm">Spread the Word</div>
+          <p class="b-md mt8">Share our mission on social media, in your community, or at your workplace. Awareness saves lives.</p>
+          <button class="btn btn-ghost btn-sm mt24">Share Harbor Haven</button>
+        </div>
+      </div>
+
+      <!-- Volunteer Form -->
+      <div class="g32" id="volunteer-form">
+        <div class="reveal-l">
+          <span class="lbl lbl-nv">Volunteer Application</span>
+          <div class="div-line"></div>
+          <h2 class="d-md mt16">Ready to give your <em>time?</em></h2>
+          <p class="b-lg mt24">We match volunteers to roles based on their skills, availability, and passion. Training is provided for all new volunteers.</p>
+          <div class="notice mt32">
+            <strong>Contact Info:</strong> For direct volunteer inquiries, reach out to Jasmine Arafat Ibrahim at <strong>07026781688</strong> or email <strong>Jasminearafatibrahim@gmail.com</strong>.
+          </div>
+          <div class="notice mt16">We currently especially need: mental health professionals, basic education tutors, protection advocates, and community organizers.</div>
+        </div>
+
+        <div class="reveal-r">
+          <div class="form-card">
+            <form onsubmit="submitForm(event,'vol-success')">
+              <div class="f-row">
+                <div class="f-group">
+                  <label class="f-label">First Name</label>
+                  <input type="text" class="f-input" placeholder="First name" required>
+                </div>
+                <div class="f-group">
+                  <label class="f-label">Last Name</label>
+                  <input type="text" class="f-input" placeholder="Last name" required>
+                </div>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Email Address</label>
+                <input type="email" class="f-input" placeholder="your@email.com" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Phone Number</label>
+                <input type="tel" class="f-input" placeholder="+234 800 000 0000" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Area of Interest</label>
+                <select class="f-select" required>
+                  <option value="" disabled selected>Choose an area</option>
+                  <option>Mental Health / Counseling</option>
+                  <option>Education / Tutoring</option>
+                  <option>Shelter / Logistics</option>
+                  <option>Community Outreach</option>
+                  <option>Administration / Office</option>
+                  <option>Social Media / Communications</option>
+                  <option>Fundraising / Events</option>
+                </select>
+              </div>
+              <div class="f-group">
+                <label class="lbl mb16">Availability</label>
+                <div class="cb-grid">
+                  <label class="cb"><input type="checkbox"> <span>Weekday mornings</span></label>
+                  <label class="cb"><input type="checkbox"> <span>Weekday evenings</span></label>
+                  <label class="cb"><input type="checkbox"> <span>Saturdays</span></label>
+                  <label class="cb"><input type="checkbox"> <span>Remote / online</span></label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Submit Application →</button>
+            </form>
+            <div class="f-success" id="vol-success">✓ &nbsp; Application received! We'll be in touch within 3–5 business days.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /involved -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · DONATE
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-donate">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">Make a Difference</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">Your gift builds <em>safety.</em></h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:560px">100% of every donation goes directly to our programs. No excessive admin, no waste. Just people being helped.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g32">
+        <div class="reveal-l">
+          <span class="lbl lbl-nv">Choose Your Impact</span>
+          <div class="div-line"></div>
+          <h2 class="d-md mt16">Why your donation <em>matters.</em></h2>
+          <p class="b-lg mt24">Donations allow us to keep our support services free of charge, ensuring that anyone facing crisis can access help immediately without financial barriers. Every gift builds safety, hope, and opportunities for independence.</p>
+          
+          <div style="margin-top:24px">
+            <strong class="lbl">What your donations support:</strong>
+            <ul style="list-style:none;padding:0;margin:12px 0;display:flex;flex-direction:column;gap:8px">
+              <li class="b-md"><span style="color:var(--gold)">•</span> Providing safe environments, nourishment, and care for victims of abuse.</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Supporting free professional mental health counseling and guidance.</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Funding basic education, materials, and literacy programs for children.</li>
+              <li class="b-md"><span style="color:var(--gold)">•</span> Facilitating community outreach and distributing essential support items.</li>
+            </ul>
+          </div>
+
+          <div class="g2" style="gap:16px;margin-top:40px">
+            <div class="dt reveal d1" onclick="pickAmt(this,'5000')">
+              <div class="lbl">Feed for a week</div>
+              <div class="dt-amt">₦5k</div>
+              <p class="b-md">Covers weekly food provision for one person in shelter</p>
+            </div>
+            <div class="dt feat reveal d2" onclick="pickAmt(this,'20000')">
+              <div class="lbl">Counseling month</div>
+              <div class="dt-amt">₦20k</div>
+              <p class="b-md">Full month of mental health sessions for one person</p>
+            </div>
+            <div class="dt reveal d3" onclick="pickAmt(this,'50000')">
+              <div class="lbl">Education term</div>
+              <div class="dt-amt">₦50k</div>
+              <p class="b-md">One child's school term fees, materials & uniform</p>
+            </div>
+            <div class="dt reveal d4" onclick="pickAmt(this,'100000')">
+              <div class="lbl">Shelter month</div>
+              <div class="dt-amt">₦100k</div>
+              <p class="b-md">Safe shelter, meals & support for one family per month</p>
+            </div>
+          </div>
+
+          <div class="f-group mt24 reveal d5">
+            <label class="f-label">Or enter a custom amount (₦)</label>
+            <input type="number" class="f-input" id="custom-amt" placeholder="e.g. 15000" min="500">
+          </div>
+        </div>
+
+        <div class="reveal-r">
+          <div class="form-card">
+            <div class="lbl mb16">Payment Method</div>
+            <div class="pay-tabs">
+              <button class="pay-tab active" onclick="payTab(this,'bank')">Bank Transfer</button>
+              <button class="pay-tab" onclick="payTab(this,'card')">Card</button>
+              <button class="pay-tab" onclick="payTab(this,'ussd')">USSD</button>
+            </div>
+
+            <div class="pay-panel active" id="pt-bank">
+              <div class="bk-row"><span class="bk-k">Bank Name</span><span class="bk-v">Access Bank Nigeria</span></div>
+              <div class="bk-row"><span class="bk-k">Account Name</span><span class="bk-v">Harbor Haven Foundation</span></div>
+              <div class="bk-row"><span class="bk-k">Account Number</span><span class="bk-v">0123 456 789</span></div>
+              <div class="bk-row"><span class="bk-k">Sort Code</span><span class="bk-v">044</span></div>
+              <div class="notice mt24">After transfer, please send your receipt to donate@harborhavenfpundation.org with your name so we can acknowledge your gift.</div>
+            </div>
+
+            <div class="pay-panel" id="pt-card">
+              <form onsubmit="submitForm(event,'donate-success')">
+                <div class="f-group">
+                  <label class="f-label">Cardholder Name</label>
+                  <input type="text" class="f-input" placeholder="Name on card" required>
+                </div>
+                <div class="f-group">
+                  <label class="f-label">Card Number</label>
+                  <input type="text" class="f-input" placeholder="0000 0000 0000 0000" maxlength="19" oninput="fmtCard(this)" required>
+                </div>
+                <div class="f-row">
+                  <div class="f-group">
+                    <label class="f-label">Expiry</label>
+                    <input type="text" class="f-input" placeholder="MM / YY" maxlength="7" required>
+                  </div>
+                  <div class="f-group">
+                    <label class="f-label">CVV</label>
+                    <input type="text" class="f-input" placeholder="123" maxlength="4" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Donate Securely →</button>
+              </form>
+              <div class="f-success" id="donate-success">✓ &nbsp; Thank you for your donation! We'll email a receipt shortly.</div>
+            </div>
+
+            <div class="pay-panel" id="pt-ussd">
+              <p class="b-md mb24">Dial the following on your registered phone to donate via USSD:</p>
+              <div class="bk-row"><span class="bk-k">GTBank</span><span class="bk-v">*737*58*amount*5959#</span></div>
+              <div class="bk-row"><span class="bk-k">Access Bank</span><span class="bk-v">*901*amount*5959#</span></div>
+              <div class="bk-row"><span class="bk-k">Zenith Bank</span><span class="bk-v">*966*amount*5959#</span></div>
+              <div class="notice mt24">After completing your USSD donation, send proof to donate@harborhavenfpundation.org</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /donate -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE · CONTACT
+══════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+
+  <div class="pg-head">
+    <div class="wrap">
+      <span class="lbl lbl-ms reveal">Get In Touch</span>
+      <div class="div-line mt16 reveal d1"></div>
+      <h1 class="d-xl mt16 reveal d2" style="color:var(--ivory)">We'd love to <em>hear</em> from you.</h1>
+      <p class="b-lg mt24 reveal d3" style="color:rgba(194,208,223,.7);max-width:560px">Whether you're seeking help, looking to collaborate, or simply want to know more ...our door is always open.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g32">
+        <div>
+          <span class="lbl lbl-nv">Contact Details</span>
+          <div class="div-line mb32"></div>
+
+          <div class="ci-row reveal d1">
+            <div class="ci-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="lbl mb4">Address</div>
+              <div class="b-lg">Enugu, Nigeria.</div>
+            </div>
+          </div>
+          <div class="ci-row reveal d2">
+            <div class="ci-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="lbl mb4">Hotline</div>
+              <div class="b-lg">09071996984 &nbsp;/&nbsp; 09063686607</div>
+            </div>
+          </div>
+          <div class="ci-row reveal d3">
+            <div class="ci-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="lbl mb4">Email</div>
+              <div class="b-lg">info@harborhavenfpundation.org</div>
+              <div class="b-md">ayshaaliyu29@gmail.com &nbsp;/&nbsp; donate@harborhavenfpundation.org</div>
+            </div>
+          </div>
+
+          <div class="card mt32 reveal d4">
+            <div class="lbl mb16">Office &amp; Helpline Hours</div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0">
+              <span class="lbl">Monday – Sunday</span>
+              <span style="font-family:var(--ff-b);font-size:.9rem;color:var(--text)">9:00 AM – 12:00 Midnight</span>
+            </div>
+          </div>
+
+          <div class="card mt24 reveal d5">
+            <div class="lbl mb16">Follow Us</div>
+            <div class="flex g" style="flex-wrap:wrap">
+              <a class="btn btn-ghost btn-sm">Twitter / X</a>
+              <a class="btn btn-ghost btn-sm">Instagram</a>
+              <a class="btn btn-ghost btn-sm">Facebook</a>
+            </div>
+          </div>
+
+          <div class="pq mt32 reveal">
+            Together, we can transform lives ...one person, one family, one community at a time.
+          </div>
+        </div>
+
+        <div class="reveal-r">
+          <span class="lbl lbl-nv">Send a Message</span>
+          <div class="div-line mb32"></div>
+          <div class="form-card">
+            <form onsubmit="submitForm(event,'contact-success')">
+              <div class="f-group">
+                <label class="f-label">Full Name</label>
+                <input type="text" class="f-input" placeholder="Your name" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Email Address</label>
+                <input type="email" class="f-input" placeholder="your@email.com" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Subject</label>
+                <input type="text" class="f-input" placeholder="What's this about?" required>
+              </div>
+              <div class="f-group">
+                <label class="f-label">Message</label>
+                <textarea class="f-textarea" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+            </form>
+            <div class="f-success" id="contact-success">✓ &nbsp; Message received! We typically respond within one business day.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /contact -->
+
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer id="main-footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="nav-logo" style="cursor:default;pointer-events:none">
+          <div class="nav-logo-mark" style="pointer-events:auto;cursor:pointer" onclick="go('home')">
+            <img src="favicon.png" alt="Harbor Haven Logo">
+          </div>
+          <div>
+            <div class="nav-logo-name" style="color:var(--ivory)">Harbor Haven<span class="nav-logo-tag" style="color:var(--fog)">Foundation · Seeing Beyond Borders</span></div>
+          </div>
+        </div>
+        <p class="ft-desc">A compassionate, community-driven organization dedicated to providing safety, support, and hope to vulnerable individuals. Enugu, Nigeria.</p>
+        <div class="flex g">
+          <button class="btn btn-gold btn-sm" onclick="go('donate')">Donate</button>
+          <button class="btn btn-sm" style="background:rgba(255,255,255,.07);color:var(--mist)" onclick="go('get-help')">Get Help</button>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-h">Organization</div>
+        <ul class="ft-links">
+          <li><a onclick="go('home')">Home</a></li>
+          <li><a onclick="go('about')">About Us</a></li>
+          <li><a onclick="go('programs')">Programs</a></li>
+          <li><a>Annual Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-h">Get Involved</div>
+        <ul class="ft-links">
+          <li><a onclick="go('donate')">Donate Now</a></li>
+          <li><a onclick="go('involved')">Volunteer</a></li>
+          <li><a onclick="go('involved')">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-h">Support</div>
+        <ul class="ft-links">
+          <li><a onclick="go('get-help')">Get Help Now</a></li>
+          <li><a onclick="go('contact')">Contact Us</a></li>
+          <li><a>Privacy Policy</a></li>
+          <li><a>Safeguarding</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="ft-copy">© 2026 Harbor Haven Foundation · harborhavenfpundation.org</div>
+      <div class="ft-copy">Seeing Beyond Borders</div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ── NAVIGATION ── */
+function go(pg) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + pg);
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.remove('active');
+    if(a.dataset.pg === pg) a.classList.add('active');
+  });
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('ham').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initReveal, 60);
+}
+
+/* ── MOBILE MENU ── */
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('ham').classList.toggle('open');
+}
+
+/* ── FORMS ── */
+function submitForm(e, id) {
+  e.preventDefault();
+  const s = document.getElementById(id);
+  if(s){ s.style.display='block'; e.target.style.opacity='.3'; e.target.style.pointerEvents='none'; }
+}
+
+/* ── DONATE TIERS ── */
+function pickAmt(el, val) {
+  document.querySelectorAll('.dt').forEach(d => d.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('custom-amt').value = val;
+}
+
+/* ── PAYMENT TABS ── */
+function payTab(btn, id) {
+  document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.pay-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('pt-'+id).classList.add('active');
+}
+
+/* ── CARD FORMATTING ── */
+function fmtCard(i) {
+  let v = i.value.replace(/\D/g,'').substring(0,16);
+  i.value = v.replace(/(.{4})/g,'$1 ').trim();
+}
+
+/* ── SCROLL REVEAL ── */
+function initReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add('vis');
+        obs.unobserve(e.target);
+      }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.page.active .reveal, .page.active .reveal-r, .page.active .reveal-l').forEach(el => {
+    if(!el.classList.contains('vis')) obs.observe(el);
+  });
+}
+
+/* ── NAV SCROLL SHADOW ── */
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('[data-pg="home"]').classList.add('active');
+  initReveal();
+});
+</script>
+</body>
+</html>
